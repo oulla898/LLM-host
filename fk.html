@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Chat Widget Integration</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #ffffff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Main Container Styling */
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      width: 90%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Heading Styling */
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* Paragraph Styling */
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    /* Button Styling */
+    .btn {
+      background-color: #ffffff;
+      color: #1e3c72;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #2a5298;
+      color: #ffffff;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to My Cool Website</h1>
+    <p>Explore the features and engage with our smart chat widget. Just click the button below to start chatting!</p>
+    <a href="#root" class="btn">Start Chat</a>
+  </div>
+
+  <!-- Chat Widget Script -->
+  <script type="text/javascript">
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        if (!document.getElementById('root')) {
+          var root = d.createElement('div');
+          root.id = 'root';
+          d.body.appendChild(root);
+        }
+        if (window.myChatWidget && typeof window.myChatWidget.load === 'function') {
+          window.myChatWidget.load({
+            id: 'cd3cfb13-5fcd-4afe-a2bb-d11659c9ca4e',
+          });
+        }
+      };
+      v.src = "https://agentivehub.com/production.bundle.min.js";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+
+</body>
+</html>
